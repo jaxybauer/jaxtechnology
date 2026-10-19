@@ -93,8 +93,12 @@ export default function PricingSection({
                 ))}
               </ul>
 
+              {/* Was createPageUrl("Onboarding"), which 404s: there is no
+                  Onboarding page, and the onboarding flow it pointed at was
+                  Base44-backed and has been removed. Contact is the real
+                  destination for "get started" on a site with no sign-up. */}
               <Link
-                to={createPageUrl("Onboarding")}
+                to={createPageUrl("Contact")}
                 className={`w-full text-center py-3 px-6 rounded-full text-sm font-semibold transition-all duration-200 ${
                   tier.highlighted
                     ? `bg-gradient-to-r ${accentGradient} text-white hover:opacity-90`
